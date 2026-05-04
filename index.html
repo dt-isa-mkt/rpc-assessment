@@ -259,7 +259,7 @@ async function sendLead(){
     await fetch("https://api.emailjs.com/api/v1.0/email/send",{
       method:"POST",headers:{"Content-Type":"application/json"},
       body:JSON.stringify({service_id:EJS_SERVICE,template_id:EJS_TEMPLATE,user_id:EJS_KEY,
-        template_params:{to_name:"ISA Digital Consulting",from_name:`${f.name} — ${f.company}`,reply_to:f.email,message:msg}})
+        template_params:{to_name:"ISA Digital Consulting",from_name:`${f.name} — ${f.company}`,reply_to:f.email,message:msg, ass_type:ass_type}})
     });
   }catch(e){}
 }
